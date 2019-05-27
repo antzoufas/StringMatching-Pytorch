@@ -2,7 +2,7 @@
 
 Usage:
 
-```python3 main.py --dataset_train= --dataset_test= ...```
+```python3 main.py --dataset_train=... --dataset_test=...```
 
 Arguments:
 
