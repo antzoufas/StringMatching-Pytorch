@@ -10,6 +10,8 @@ Arguments:
 
 ```--dataset_test:``` one of [geonames, jrc_organization, jrc_person, historical_places]
 
+NOTE: If dataset_train == dataset_test, it will perform a two-fold evaluation
+
 ```--batch_size:``` int, default 32
 
 ```--hidden_units:``` int, default 60
