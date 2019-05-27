@@ -29,7 +29,6 @@ class StringMatchingDataset(Dataset):
     def __init__(self, name, characters, train_split, test_split):
         super(StringMatchingDataset, self).__init__()
 
-        #self.data = pd.read_csv('datasets/{}.csv'.format(name), sep='|', header=None, names=['s1', 's2', 'res'], usecols=[0,1,2])
         self.data = list(csv.DictReader(open('datasets/{}.csv'.format(name), encoding='utf-8'), delimiter='|', fieldnames=['s1', 's2', 'res']))
 
         # If we are doing two-fold or not
@@ -70,7 +69,7 @@ def load_dataset(name, characters, two_fold_train, two_fold_test):
 def train(model, data, data_val):
     criterion = nn.BCELoss()
     optimizer = optim.Adam(model.parameters(), lr=0.001)
-    n_epochs = 30
+    n_epochs = 20
     for epoch in range(n_epochs):
         total_loss = 0.0
         for i, batch in enumerate(data):
